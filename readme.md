@@ -1,6 +1,6 @@
 # look
 
-A small DNS tool.
+A small DNS cli tool.
 
 ## usage
 
