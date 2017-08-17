@@ -4,7 +4,7 @@ A small DNS cli tool.
 
 ## usage
 
-`look *hostname*`
+`look hostname`
 
 ## install
 
