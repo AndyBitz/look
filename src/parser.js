@@ -47,7 +47,7 @@ class Parser {
 
     for (let i in data) {
       const address = data[i].address
-      const counter = address.indexOf(':') !== -1 ? 28 : 15
+      const counter = address.indexOf(':') !== -1 ? 39 : 15
       const ws = ' '.repeat(counter-address.length)
       const ttl = chalk.green(data[i].ttl)
 
