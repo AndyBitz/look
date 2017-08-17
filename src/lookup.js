@@ -8,10 +8,14 @@ const lookup = async (hostname) => {
   })
 
   const ns = await new Promise(res => {
-    dns.resolveNs(hostname, (err, addresses) => res(addresses))
+    dns.resolveNs(hostname, (err, addresses) => res(addresses || []))
   })
 
-  const out = pretty({ hostname, ip, ns })
+  const txt = await new Promise(res => {
+    dns.resolveTxt(hostname, (err, addresses) => res(addresses || []))
+  })
+
+  const out = pretty({ hostname, ip, ns, txt })
   console.log(out)
 }
 
@@ -24,6 +28,9 @@ ${title('host')}
 ${title('ip')}
   ${data.ip || '-'}
 
+${title('txt')}
+  ${data.txt.toString().replace(/,/g, '\n  ')}
+  
 ${title('nameservers')}
   ${data.ns.toString().replace(/,/g, '\n  ')}
 `)
