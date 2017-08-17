@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "src/main.js",
   "bin": "./src/main.js",
-  "repository": "https://github.com/AndyBitz/site",
+  "repository": "https://github.com/AndyBitz/look",
   "scripts": {
     "start": "node src/main.js"
   },

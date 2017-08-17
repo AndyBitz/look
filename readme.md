@@ -8,4 +8,4 @@ A small DNS tool.
 
 ## install
 
-`npm i -g https://github.com/AndyBitz/site`
+`npm i -g https://github.com/AndyBitz/look`
