@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const lookup = require('./lookup')
 
 // first is nodejs, second main.js, third host
