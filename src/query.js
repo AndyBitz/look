@@ -1,7 +1,7 @@
 const util = require('util')
 const dns = require('dns')
 
-
+// promisify some functions
 const _resolveCname = util.promisify(dns.resolveCname)
 const _resolveMx = util.promisify(dns.resolveMx)
 const _resolveNs = util.promisify(dns.resolveNs)
