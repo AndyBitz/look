@@ -1,6 +1,6 @@
 {
   "name": "look-dns",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "main": "src/main.js",
   "bin": {
     "look": "./src/main.js"
