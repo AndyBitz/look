@@ -23,6 +23,10 @@ class Parser {
       case 'A':
       case 'AAAA':
         return this.addressBody(data)
+
+      case 'MX':
+        return this.mxBody(data)
+
       default:
         return this.defaultBody(data)
     }
@@ -52,6 +56,26 @@ class Parser {
       const ttl = chalk.green(data[i].ttl)
 
       buffer += `    ${address} ${ws} ${ttl}\n`
+    }
+
+    return buffer
+  }
+
+  mxBody(data) {
+    let buffer = ''
+
+    for (let i in data) {
+      const mx = data[i]
+
+      let prio = `${mx.priority}` || ''
+      const exch = mx.exchange || ''
+
+      if (prio.length < 8) {
+        const ws = ' '.repeat(8 - prio.length)
+        prio = `${prio}${ws}`
+      }
+
+      buffer += `    ${prio} ${exch}\n`
     }
 
     return buffer
