@@ -1,6 +1,6 @@
 # look
 
-A small DNS cli tool. Outputs A, AAAA, TXT, NS... records to your terminal.
+A small DNS cli tool. Prints A, AAAA, TXT, NS... records to your terminal.
 
 ## install
 
