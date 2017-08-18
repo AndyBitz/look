@@ -15,7 +15,7 @@ class Parser {
       ? this.handleBody(name, data)
       : '  -\n'
 
-    return `${title}\n${body}\n`
+    return `  ${title}\n${body}\n`
   }
 
   handleBody(name, data) {
@@ -33,10 +33,10 @@ class Parser {
 
     if (Array.isArray(data)) {
       for (let i in data) {
-        buffer += `  ${data[i]}\n`
+        buffer += `    ${data[i]}\n`
       }
     } else {
-      buffer += `  ${data}\n` 
+      buffer += `    ${data}\n` 
     }
 
     return buffer
@@ -51,7 +51,7 @@ class Parser {
       const ws = ' '.repeat(counter-address.length)
       const ttl = chalk.green(data[i].ttl)
 
-      buffer += `  ${address} ${ws} ${ttl}\n`
+      buffer += `    ${address} ${ws} ${ttl}\n`
     }
 
     return buffer
@@ -59,7 +59,7 @@ class Parser {
 
   show() {
     const data = this.data
-    let buffer = ''
+    let buffer = '\n'
 
     for (let name in data) {
       buffer += this.template(name, data[name])

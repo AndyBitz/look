@@ -1,8 +1,10 @@
 {
-  "name": "look",
+  "name": "look-dns",
   "version": "1.0.0",
   "main": "src/main.js",
-  "bin": "./src/main.js",
+  "bin": {
+    "look": "./src/main.js"
+  },
   "repository": "https://github.com/AndyBitz/look",
   "scripts": {
     "start": "node src/main.js"
